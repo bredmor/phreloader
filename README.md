@@ -11,6 +11,7 @@
 ### Planned Features (Not Yet Implemented)
  - Support more custom vendor directory configurations
  - Publish configured preloading script to project root
+ - Tests
  
 ## Installation
  
