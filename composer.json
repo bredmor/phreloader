@@ -1,0 +1,22 @@
+{
+  "name": "bredmor/phreload",
+  "type": "library",
+  "description": "An automatic preloader for PHP 7.4+",
+  "keywords": ["preloader","7.4","loading","efficiency"],
+  "homepage": "https://github.com/bredmor/phreloader",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Morgan Breden",
+      "email": "morgan@bredenlabs.com",
+      "homepage": "http://github.com/bredmor",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "bredmor\\CommentAnalyzer\\": "src/"
+    }
+  },
+
+}
