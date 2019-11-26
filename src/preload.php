@@ -8,7 +8,7 @@ class Preloader
 
     public function __construct(string $path, string $composer_path = null)
     {
-        $map = $composer_path ? rtrim($composer_path, "/") . '/composer/autoload_classmap.php' : __DIR__ . "/vendor/composer/autoload_classmap.php";
+        $map = $composer_path ? rtrim($composer_path, "/") . '/composer/autoload_classmap.php' : __DIR__ . "../composer/autoload_classmap.php";
         $this->loadIgnoreList();
         $this->base_path = $path;
         $this->map = require_once($map);
