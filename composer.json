@@ -13,6 +13,9 @@
       "role": "Developer"
     }
   ],
+  "require": {
+    "php": "7.4.0"
+  },
   "autoload": {
     "psr-4": {
       "bredmor\\CommentAnalyzer\\": "src/"
