@@ -3,32 +3,31 @@
  
  This preloader will automatically preload every PHP file defined by your composer classmap, as long as it can be found within the parent directory.
  
- ## Work In Progress
+## Work In Progress
  This package is a heavy work in progress. As of the time of this writing, PHP 7.4 has not yet been released, nor has this package been extensively tested. ***USE AT YOUR OWN RISK***
  
  This package is a stopgap solution until [Composer supports preloading](https://github.com/composer/composer/issues/7777).
  
- ### Planned Features (Not Yet Implemented)
- - Ignore list (files not to be preloaded)
+### Planned Features (Not Yet Implemented)
  - Support more custom vendor directory configurations
  - Publish configured preloading script to project root
  
- ## Installation
+## Installation
  
- ### From Source:
+### From Source:
  Clone the repository from GitHub or unzip into your vendor directory. CommentAnalyzer is packaged for [PSR-4](https://www.php-fig.org/psr/psr-4/) autoloading.
  
- ### From Composer:
+### From Composer:
  `composer require bredmor/phreloader`
  
- ### Basic Usage
+### Basic Usage
  Create a file `preloader.php` in your project root directory with the following contents:
  
  ```$php
 require_once(__DIR__ . '/vendor/autoload.php');
 
 use bredmor/phreload/Preloader;
-(new Preloader('/'))->go(); // Where '/' refers to the root directory of your project's code.
+(new Preloader(__DIR__))->go(); // Where `__DIR__` refers to the root directory of your project's code.
 
 ```
 
@@ -37,7 +36,7 @@ use bredmor/phreload/Preloader;
 require_once(__DIR__ . '/vendor/autoload.php');
 
 use bredmor/phreload/Preloader;
-(new Preloader('/', 'my/custom/vendor/dir'))->go(); 
+(new Preloader(__DIR__, '/my/custom/vendor/dir'))->go(); 
 ```
 
 Add the following line to your `php.ini` configuration file(s):
@@ -48,8 +47,20 @@ opcache.preload=/path/to/your/project/preload.php
 
 That's  it! The next time you restart your server, PHP will preload your project files in memory.
 
+### Ignoring specific files or directories
+In the same directory as your project root, create a new file `.nopreload`. Each line in this file should be the (relative or absolute) path to files or directories not to be preloaded. 
+
+Example:
+```
+tests/
+some_rarely_used_dir/
+badfile.php
+another/directory/file.php
+``` 
+
+
 ## Caveats
-- Preloading requires more available RAM the larger your project is. Preloading your entire classmap may not be desirable for larger projects, especially on smaller servers/containers.
+- Preloading requires more available RAM the larger your project is. Preloading your entire classmap may not be desirable for larger projects, especially on smaller servers/containers. It is strongly recommended to use the ignore list to ignore rarely-loaded files, or directories that contain them..
 
 - Because preloading stores the opcodes for your files in memory, you *must restart your server every time you change one of these files* - the new code will not be picked up until you do, your server will continue to use the version cached in RAM.
 
