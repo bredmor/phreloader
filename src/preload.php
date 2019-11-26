@@ -2,8 +2,8 @@
 
 class Preloader
 {
-    private $path;
-    private $map = [];
+    private string $path;
+    private array $map = [];
 
     public function __construct(string $path, string $composer_path = null)
     {
@@ -12,11 +12,11 @@ class Preloader
         $this->map = require_once($map);
     }
 
-    public function go() {
+    public function go(): void {
         $this->readDir($this->path);
     }
 
-    private function readDir($path) {
+    private function readDir($path): void {
         $dir = new DirectoryIterator($path);
         foreach($dir as $node) {
             if($node->isDir()) {
