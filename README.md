@@ -1,5 +1,5 @@
 # Phreloader
-![Packagist Version](https://img.shields.io/packagist/v/bredmor/phreloader) ![PHP from Packagist](https://img.shields.io/packagist/php-v/bredmor/phreloader) ![GitHub](https://img.shields.io/github/license/bredmor/phreloader) 
+[![Packagist Version](https://img.shields.io/packagist/v/bredmor/phreloader)](https://packagist.org/packages/bredmor/phreloader) ![PHP from Packagist](https://img.shields.io/packagist/php-v/bredmor/phreloader) [![License from GitHub](https://img.shields.io/github/license/bredmor/phreloader)](LICENSE)
 
  Phreloader is a simple *auto-preloader* for the [PHP preloader](https://wiki.php.net/rfc/preload) available from version 7.4 and later.
  
