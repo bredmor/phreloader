@@ -1,4 +1,6 @@
 # Phreloader
+![Packagist Version](https://img.shields.io/packagist/v/bredmor/phreloader) ![PHP from Packagist](https://img.shields.io/packagist/php-v/bredmor/phreloader) ![GitHub](https://img.shields.io/github/license/bredmor/phreloader) 
+
  Phreloader is a simple *auto-preloader* for the [PHP preloader](https://wiki.php.net/rfc/preload) available from version 7.4 and later.
  
  This preloader will automatically preload every PHP file defined by your composer classmap, as long as it can be found within the parent directory.
