@@ -52,3 +52,19 @@ That's  it! The next time you restart your server, PHP will preload your project
 - Preloading requires more available RAM the larger your project is. Preloading your entire classmap may not be desirable for larger projects, especially on smaller servers/containers.
 
 - Because preloading stores the opcodes for your files in memory, you *must restart your server every time you change one of these files* - the new code will not be picked up until you do, your server will continue to use the version cached in RAM.
+
+## Requirements
+
+Phreloader is built for PHP `7.4` and later.
+
+## Authors
+
+- Morgan Breden  | [GitHub](https://github.com/bredmor)  | [Twitter](https://twitter.com/bredmor)
+
+## Contributing
+
+Pull requests, bug reports and feature requests are welcome.
+
+## License
+
+Phreloader is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
