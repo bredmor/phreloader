@@ -1,5 +1,5 @@
 {
-  "name": "bredmor/phreload",
+  "name": "bredmor/phreloader",
   "type": "library",
   "description": "An automatic preloader for PHP 7.4+",
   "keywords": ["preloader","7.4","loading","efficiency"],
