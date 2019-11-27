@@ -29,7 +29,7 @@
  ```$php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-use bredmor/phreload/Preloader;
+use bredmor/phreloader/Preloader;
 (new Preloader(__DIR__))->go(); // Where `__DIR__` refers to the root directory of your project's code.
 
 ```
@@ -38,7 +38,7 @@ use bredmor/phreload/Preloader;
 ```$php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-use bredmor/phreload/Preloader;
+use bredmor/phreloader/Preloader;
 (new Preloader(__DIR__, '/my/custom/vendor/dir'))->go(); 
 ```
 
