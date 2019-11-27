@@ -18,7 +18,7 @@
 ## Installation
  
 ### From Source:
- Clone the repository from GitHub or unzip into your vendor directory. CommentAnalyzer is packaged for [PSR-4](https://www.php-fig.org/psr/psr-4/) autoloading.
+ Clone the repository from GitHub or unzip into your vendor directory. Phreloader is packaged for [PSR-4](https://www.php-fig.org/psr/psr-4/) autoloading.
  
 ### From Composer:
  `composer require bredmor/phreloader`
