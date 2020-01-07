@@ -5,9 +5,6 @@
  
  This preloader will automatically preload every PHP file defined by your composer classmap, as long as it can be found within the parent directory.
  
-# Warning
-There is currently a [major bug](https://bugs.php.net/bug.php?id=78918) with PHP 7.4's preloading functionality that may cause crashes when preloading with `require` as this package does. It is highly recommended that you do ***not*** use this package for anything other than testing until this bug is resolved.
- 
 ## Work In Progress
  This package is a heavy work in progress. As of the time of this writing, PHP 7.4 has not yet been released, nor has this package been extensively tested. ***USE AT YOUR OWN RISK***
  
